@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title> Signup Form</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">           
+<link rel="stylesheet" type="text/css" href="../static/css/style.css">
+<script src="{{ url_for('static', filename='js/jquery-3.6.0.min.js') }}"></script>
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+</head>
+<body>
+    <br>
+    <br>
+    <br>
+    <div class="container" >
+        <div class="row">
+        <div class="col-md-3">
+        </div>
+        <div class="col-md-6 main">
+            <form action="registrar" method="POST">
+            <h1> Form Registrer </h1>
+
+            <input class="box" type="text" name="name" id="fname"
+            placeholder="Name"  required />
+            <div id="mensaje1" class="errores erroresnombre">Ingrese su nombre</div><br>
+
+            <input class="box" type="email" name="email" id="femail"
+            placeholder="E-Mail " required />
+            <div id="mensaje2" class="errores erroresnombre">Ingrese su email</div><br>
+
+            <input class="box" type="text" name="subject" id="fsubject"
+            placeholder="Subject " required />
+            <div id="mensaje3" class="errores erroresnombre">Ingrese suject</div><br>
+
+            <input class="box" type="text" name="menssage" id="fmenssage"
+            placeholder="Menssage " required/>
+            <div id="mensaje4" class="errores erroresnombre">Ingrese su mensaje</div><br>
+            <br>
+
+            <div id="fcaptcha" class="g-recaptcha" data-sitekey="6LergQQhAAAAABxv-64oh5Dbmi4yR7YfJyNVNAtI" ></div>   
+            <br>   
+
+            <input type="submit" name="" id="fEnviar" value="Enviar" class="boton">
+            </form>
+        </div>
+        <div class="col-md-3">
+        </div>
+    </div>
+    </div>
+</body>
+</html>
+<script src="{{ url_for('static', filename='js/app.js') }}"></script>
